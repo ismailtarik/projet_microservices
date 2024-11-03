@@ -1,0 +1,25 @@
+server:
+  port: 8083
+
+#spring:
+#  application:
+#    name: order
+#  datasource:
+#    username: postgres
+#    url: jdbc:postgresql://localhost:5432/orderDB
+#    password: tarik2000
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format_sql: true
+#    show-sql: true
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    prefer-ip-address: true

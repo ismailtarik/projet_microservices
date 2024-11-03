@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/customers/**
+        - id: product-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/products/**
+        - id: order-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/v1/orders/**
+
+  application:
+    name: gateway-service
+
+server:
+  port: 8888
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#  instance:
+#    prefer-ip-address: true
